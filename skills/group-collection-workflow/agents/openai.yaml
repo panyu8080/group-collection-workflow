@@ -1,0 +1,4 @@
+interface:
+  display_name: "群收集工作流"
+  short_description: "复用群消息报账、业绩上报与资料收集流程，设计规则、配置、验收及执行端交接"
+  default_prompt: "使用 $group-collection-workflow 为本项目设计或审查群消息收集流程，保留既定平台与业务口径，列出必要配置和验收项。"
