@@ -92,6 +92,22 @@ Excel、文档、文字或清晰截图都可以。先上传空模板或最少必
 
 如果工具支持技能名称调用，也可以使用 `$group-collection-workflow`。
 
+## 用 WorkBuddy 时：先确认企业微信已接好
+
+安装技能不等于已经绑定企业微信。首次使用时，请让 AI 按[配置与验收说明](skills/group-collection-workflow/references/workbuddy-wecom-setup.md)帮助检查：
+
+1. **账号与机器人**：有没有可用的企业微信账号和已有机器人？有就先核对复用，不重复新建。
+2. **绑定与人工确认**：按当前 WorkBuddy 的企微集成入口配置；扫码、登录及授权由本人或管理员完成。快捷绑定可能创建新机器人，已有机器人时先核对再操作。
+3. **使用范围与权限**：实际提交人员是否能使用机器人？消息接入、文档能力授权、具体表格访问权限分别检查；不要为了方便把正式表开放给全员。
+4. **分层测试**：先单聊，再由普通成员在获准的测试群里 @ 机器人；之后在测试表验证写入与读回。单聊能回复不代表群报账和写表都已正常。
+5. **运行方式**：确认电脑及 WorkBuddy 服务是否需要保持运行；关机后的处理与历史补读能力须另行验证。
+
+可以直接对 WorkBuddy 说：
+
+> 请先检查我是否已经绑定企业微信、是否已有可复用的机器人，列出已验证和待验证项。需要我扫码、登录或管理员授权时，告诉我具体入口，并等我完成。不要自行新建机器人、重置 Secret、扩大权限或写正式表。经我批准后，再做单聊、测试群和测试表的分层验收。
+
+绑定方式参考 [WorkBuddy 官方接入指南](https://www.workbuddy.cn/docs/workbuddy/Wecom-Guide)，界面以当前版本为准。
+
 ## 用完后会得到什么？
 
 根据你的要求，AI 可以帮助生成或审查：
@@ -125,15 +141,17 @@ Excel、文档、文字或清晰截图都可以。先上传空模板或最少必
 | 文件 | 作用 |
 |---|---|
 | [SKILL.md](skills/group-collection-workflow/SKILL.md) | AI 的主入口，按任务选择模块 |
+| [开始前的资料引导](skills/group-collection-workflow/references/intake.md) | 准备资料、少量提问、沿用自己的分类口径 |
 | [报账模块](skills/group-collection-workflow/references/reimbursement.md) | 费用、资金来源、确认与结算口径 |
 | [业绩模块](skills/group-collection-workflow/references/performance.md) | 指标、归属、订单、实收与退款 |
 | [资料模块](skills/group-collection-workflow/references/materials.md) | 部分接收、完成状态、附件与版本 |
 | [平台选择](skills/group-collection-workflow/references/platform-choice.md) | 腾讯与飞书的选择提示及接入核验 |
+| [WorkBuddy 企业微信配置](skills/group-collection-workflow/references/workbuddy-wecom-setup.md) | 已有机器人复用、扫码授权、权限与分层验收 |
 | [交付与测试](skills/group-collection-workflow/references/delivery-and-tests.md) | 审查、测试与执行端交接方法 |
 
 ## 隐私与分享
 
-本仓库为公开通用版 1.3.1，不包含真实公司配置、业务台账、客户资料或密钥。示例金额均为模拟测试输入。
+本仓库为公开通用版 1.3.2，不包含真实公司配置、业务台账、客户资料或密钥。示例金额均为模拟测试输入。
 
 使用时填写的真实项目配置留在自己的私密环境，不要上传到公开仓库；台账、群截图、日志、备份、证件资料和 `.env` 也不要混入。
 
